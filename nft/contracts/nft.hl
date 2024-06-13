@@ -22,7 +22,7 @@ func main(_, ctx: ScriptContext) -> Bool {
     value_minted: Value = tx.minted;
     (value_minted == Value::new(tt_assetclass, 1)).trace("NFT1: ") &&
     tx.inputs.any((input: TxInput) -> Bool {
-                        (input.output_id == outputId).trace("NFT2: ")
-                        }
+                (input.output_id == outputId).trace("NFT2: ")
+            }
     )
 }
